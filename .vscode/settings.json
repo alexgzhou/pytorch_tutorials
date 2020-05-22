@@ -1,0 +1,24 @@
+// 将设置放入此文件中以覆盖默认值和用户设置。
+{
+    "editor.fontSize": 16,
+    "markdown.preview.fontSize": 18,
+    // "python.pythonPath": "~/git/ml/4.Practices/Python_Machine_Learning_Mini-Course/p3/bin/python",
+    // "python.pythonPath": "~/anaconda3/bin/python",
+    // "python.pythonPath": "C:\\Users\\Alex\\Anaconda3\\python.exe",
+    // "python.pythonPath": "C:\\Users\\Alex\\Anaconda3\\envs\\qtr\\python.exe",
+    // "python.pythonPath": "/usr/local/bin/python",
+    // "python.pythonPath": "/anaconda3/envs/qtr/bin/python",
+    "python.pythonPath": "/opt/conda/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "yapf",
+    "python.terminal.activateEnvironment": false,  // 禁止激活相关环境(停止运行后面的命令), 好像这里设置无效, 在用户设置中配置有效: C:/Users/Alex/Anaconda3/Scripts/activate && conda activate base
+    "editor.renderControlCharacters": true,  // 显示控制字符 (换行符, 制表符, 空格等)
+    "editor.renderWhitespace": "boundary",  // 渲染空格
+    "files.exclude": {  // 资源管理器隐藏的文件或路径
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+}

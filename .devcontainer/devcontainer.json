@@ -1,0 +1,86 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+// [docker-in-docker-compose 参考](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker-compose)
+// [docker-in-docker 参考](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker)
+// [python-3 参考](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/python-3)
+// [vscode-remote-try-python 参考](https://github.com/Microsoft/vscode-remote-try-python)
+// [docker-existing-docker-compose 参考](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-existing-docker-compose)
+{
+    // "See https://aka.ms/vscode-remote/devcontainer.json for format details."
+    // 终端 console 如果出现字体显示不正常, 不能选择等情况: 文件/Files -> 首选项 -> 颜色主体(Ctrl + K Ctrl + T) -> 随便切换一下主题(再切回来-可选)即可正常显示
+    "name": "jupyterlab",
+    
+    // "The 'service' property is the name of the service for the container that VS Code should"
+    // "use. Update this value and .devcontainer/docker-compose.yml to the real service name."
+    "service": "jupyterlab", 
+
+    // "The optional 'workspaceFolder' property is the path VS Code should open by default when"
+    // "connected. This is typically a file mount in .devcontainer/docker-compose.yml"
+    // "workspaceFolder": "/workspace",
+    "workspaceFolder": "/tf/jupyter",
+
+    // Use 'settings' to set *default* container specific settings.json values on container create. 
+    // You can edit these settings after create using File > Preferences > Settings > Remote.
+    "settings": { 
+        // This will ignore your local shell user setting for Linux since shells like zsh are typically 
+        // not in base container images. You can also update this to an specific shell to ensure VS Code 
+        // uses the right one for terminals and tasks. For example, /bin/bash (or /bin/ash for Alpine).
+        // "python.linting.enabled": true,
+        // "python.linting.pylintEnabled": true,
+        // "python.linting.pylintPath": "/usr/local/bin/pylint",
+        "python.pythonPath": "/opt/conda/bin/python",
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+
+    // "Add any extensions you want auto-installed here."
+    "extensions": [
+        // "peterjausovec.vscode-docker",
+        // "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        // "ms-python.anaconda-extension-pack",
+        // "coenraads.bracket-pair-colorizer-2",
+        // "ms-ceintl.vscode-language-pack-zh-hans",
+        // "hookyqr.beautify",
+        "eamodio.gitlens",
+        // "goessner.mdmath",
+        // "eg2.vscode-npm-script",
+        // "christian-kohler.npm-intellisense",
+        // "redhat.vscode-yaml",
+        // "formulahendry.code-runner",
+        // "ms-vsliveshare.vsliveshare",
+        // "ms-vsliveshare.vsliveshare-audio",
+        // "karigari.chat",
+        // "mechatroner.rainbow-csv",
+    ],
+
+    // "Remove this line or set none if you want to keep your containers running after VS Code shuts down."
+    // "shutdownAction": "stopCompose"
+    "shutdownAction": "none",
+
+    // Uncomment the next line to run commands after the container is created - for example installing git.
+    // **注意:** 必须以 `$ source /workspace/qTrading/postCmd.sh` 或 `$ . /workspace/qTrading/postCmd.sh` 执行才能让 postCmd.sh 中的 `. ~/.bashrc` 指令生效 => 必须使用 `.`, 不能使用 `source`, 否则报错, `source not found`
+    // // 在 "docker-compose.yml" 中 "service": "get_data" 的 "workspaceFolder": "/workspace/qTrading" 路径下执行的命令, 如 node 项目的 `$ npm i`
+    // // "postCreateCommand": "",
+    // "postCreateCommand": "apt-get update -y; apt-get upgrade -y",
+    // "postCreateCommand": "echo \"alias ll='ls -al -h'\" >> ~/.bashrc; echo \"alias backup='/workspace/qTrading/backup.sh'\" >> ~/.bashrc; . ~/.bashrc",
+    // "postCreateCommand": "pwd; chmod 755 *.sh; . /workspace/qTrading/postCmd.sh",
+
+
+    // Use 'appPort' to create a container with published ports. If the port isn't working, be sure
+    // your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
+    // "appPort": [ 9000 ],
+    // "devPort": 9999,
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Uncomment the next line to have VS Code connect as an existing non-root user in the container. See
+    // https://aka.ms/vscode-remote/containers/non-root for details on adding a non-root user if none exist.
+    // "remoteUser": "vscode",
+
+    // Uncomment the next line if you want start specific services in your Docker Compose config.
+    // "runServices": [],
+    
+    // "Other notes:"
+    // "- The 'appPorts' property is not supported in the Docker Compose case. Add the ports into"
+    // "  the docker-compose.yml in the .devcontainer folder instead." 
+    // "- The 'runArgs' property is also not supported."
+}

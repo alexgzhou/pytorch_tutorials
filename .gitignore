@@ -115,3 +115,7 @@ ENV/
 .DS_Store
 cleanup.sh
 *.swp
+
+# by Alex
+recipes/
+src/

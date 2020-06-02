@@ -21,4 +21,12 @@
         "**/CVS": true,
         "**/.DS_Store": true
     },
+    "files.watcherExclude": {  // exclude specific workspace directories from the VS Code file watcher, https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/_build/**": true,
+        "**/__pycache__/**": true,
+        "**/_data/**": true
+    }
 }

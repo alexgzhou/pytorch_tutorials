@@ -21,7 +21,7 @@
         "**/CVS": true,
         "**/.DS_Store": true
     },
-    "files.watcherExclude": {  // exclude specific workspace directories from the VS Code file watcher, https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc
+    "files.watcherExclude": {  // exclude specific workspace directories from the VS Code file watcher, https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc; Configure glob patterns of file paths to exclude from file watching. Patterns must match on absolute paths (i.e. prefix with ** or the full path to match properly). Changing this setting requires a restart. When you experience Code consuming lots of CPU time on startup, you can exclude large folders to reduce the initial load. `*` 代表任意字符, `/*/` 代表路径下任意文件夹, `/**/` 代表任意多层路径
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
         "**/node_modules/*/**": true,

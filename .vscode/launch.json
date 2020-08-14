@@ -9,15 +9,6 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            // "preLaunchTask": "get_data_deploy",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python: Current File (Start get_data_deploy and running)",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "preLaunchTask": "get_data_deploy",
             "console": "integratedTerminal"
         },
         {
@@ -39,16 +30,6 @@
                 "-m",
                 "ipdb"
             ]
-        },
-        {
-            "name": "Python: Current File (Integrated Terminal with env qtr)",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            // "preLaunchTask": "open_env_qtr",
-            // "postDebugTask": "close_env_qtr",
-            "console": "integratedTerminal"
-            // "console": "internalConsole"
         },
         {
             "name": "Python: Remote Attach",

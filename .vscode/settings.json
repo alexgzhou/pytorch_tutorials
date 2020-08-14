@@ -27,6 +27,11 @@
         "**/node_modules/*/**": true,
         "**/_build/**": true,
         "**/__pycache__/**": true,
-        "**/_data/**": true
-    }
+        "**/_data/**": true,
+        "**/temp*/**": true,
+        "**/v2ray-linux-64/**": true,
+        // "**/jupyte*/**": true,
+        // "**/pytorch_tutorials/**": true
+    },
+    // "python.dataScience.jupyterServerURI": "http://10.5.16.198:18888/?token=53ad3dae1a5dfa34203480c678cc19969df9c295bdf5bcd5"
 }
